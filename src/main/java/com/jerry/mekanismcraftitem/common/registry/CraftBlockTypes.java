@@ -6,6 +6,7 @@ import com.jerry.mekanism_extras.common.block.storage.energycube.ECTier;
 import com.jerry.mekanism_extras.common.block.storage.energycube.ExtraTileEntityEnergyCube;
 import com.jerry.mekanismcraftitem.common.CraftLang;
 import com.jerry.mekanismcraftitem.common.content.blocktype.CraftMachine;
+import com.jerry.mekanismcraftitem.integration.Addons;
 import mekanism.common.block.attribute.*;
 import mekanism.common.registration.impl.BlockRegistryObject;
 import mekanism.common.registration.impl.TileEntityTypeRegistryObject;
@@ -23,10 +24,10 @@ public class CraftBlockTypes {
     public static final CraftMachine<TileEntityEnergyCube> CRAFT_ELITE_ENERGY_CUBE = createEnergyCube(EnergyCubeTier.ELITE, () -> CraftTileEntityTypes.CRAFT_ELITE_ENERGY_CUBE, () -> CraftBlocks.CRAFT_ULTIMATE_ENERGY_CUBE);
     public static final CraftMachine<TileEntityEnergyCube> CRAFT_ULTIMATE_ENERGY_CUBE = createEnergyCube(EnergyCubeTier.ULTIMATE, () -> CraftTileEntityTypes.CRAFT_ULTIMATE_ENERGY_CUBE, null);
     // Extra Energy Cubes
-    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_ABSOLUTE_ENERGY_CUBE = createExtraEnergyCube(ECTier.ABSOLUTE, () -> CraftTileEntityTypes.CRAFT_ABSOLUTE_ENERGY_CUBE, () -> CraftBlocks.CRAFT_SUPREME_ENERGY_CUBE);
-    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_SUPREME_ENERGY_CUBE = createExtraEnergyCube(ECTier.SUPREME, () -> CraftTileEntityTypes.CRAFT_SUPREME_ENERGY_CUBE, () -> CraftBlocks.CRAFT_COSMIC_ENERGY_CUBE);
-    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_COSMIC_ENERGY_CUBE = createExtraEnergyCube(ECTier.COSMIC, () -> CraftTileEntityTypes.CRAFT_COSMIC_ENERGY_CUBE, () -> CraftBlocks.CRAFT_INFINITE_ENERGY_CUBE);
-    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_INFINITE_ENERGY_CUBE = createExtraEnergyCube(ECTier.INFINITE, () -> CraftTileEntityTypes.CRAFT_INFINITE_ENERGY_CUBE, null);
+    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_ABSOLUTE_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? createExtraEnergyCube(ECTier.ABSOLUTE, () -> CraftTileEntityTypes.CRAFT_ABSOLUTE_ENERGY_CUBE, () -> CraftBlocks.CRAFT_SUPREME_ENERGY_CUBE) : null;
+    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_SUPREME_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? createExtraEnergyCube(ECTier.SUPREME, () -> CraftTileEntityTypes.CRAFT_SUPREME_ENERGY_CUBE, () -> CraftBlocks.CRAFT_COSMIC_ENERGY_CUBE) : null;
+    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_COSMIC_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? createExtraEnergyCube(ECTier.COSMIC, () -> CraftTileEntityTypes.CRAFT_COSMIC_ENERGY_CUBE, () -> CraftBlocks.CRAFT_INFINITE_ENERGY_CUBE) : null;
+    public static final CraftMachine<ExtraTileEntityEnergyCube> CRAFT_INFINITE_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? createExtraEnergyCube(ECTier.INFINITE, () -> CraftTileEntityTypes.CRAFT_INFINITE_ENERGY_CUBE, null) : null;
 
     private static <TILE extends TileEntityEnergyCube> CraftMachine<TILE> createEnergyCube(EnergyCubeTier tier, Supplier<TileEntityTypeRegistryObject<TILE>> tile, Supplier<BlockRegistryObject<?, ?>> upgradeBlock) {
         return CraftMachine.CraftMachineBuilder.createMachine(tile, CraftLang.DESCRIPTION_CRAFT_ENERGY_CUBE)
