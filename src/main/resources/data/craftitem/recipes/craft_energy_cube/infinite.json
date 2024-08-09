@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "mekanism_extras:infinite_energy_cube"
+    }
+  ],
+  "result": {
+    "item": "craftitem:craft_infinite_energy_cube"
+  }
+}

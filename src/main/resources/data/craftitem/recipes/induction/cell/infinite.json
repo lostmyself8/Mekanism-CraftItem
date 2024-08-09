@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "craftitem:craft_infinite_energy_cube"
+    },
+    "E": {
+      "item": "craftitem:craft_energy_tablet"
+    },
+    "P": {
+      "item": "mekanism_extras:cosmic_induction_cell"
+    }
+  },
+  "pattern": [
+    "EPE",
+    "P#P",
+    "EPE"
+  ],
+  "result": {
+    "item": "mekanism_extras:infinite_induction_cell"
+  }
+}

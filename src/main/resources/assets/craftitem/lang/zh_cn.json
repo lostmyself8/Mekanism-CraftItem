@@ -1,0 +1,17 @@
+{
+  "constants.craftitem.mod_name": "通用机械：合成用物品",
+
+  "item.craftitem.craft_alloy_infused": "合成用·灌注合金",
+  "item.craftitem.craft_energy_tablet": "合成用·能量板",
+
+  "block.craftitem.craft_basic_energy_cube": "合成用·基础能量立方",
+  "block.craftitem.craft_advanced_energy_cube": "合成用·高级能量立方",
+  "block.craftitem.craft_elite_energy_cube": "合成用·精英能量立方",
+  "block.craftitem.craft_ultimate_energy_cube": "合成用·终极能量立方",
+  "block.craftitem.craft_absolute_energy_cube": "合成用·绝对能量立方",
+  "block.craftitem.craft_supreme_energy_cube": "合成用·至尊能量立方",
+  "block.craftitem.craft_cosmic_energy_cube": "合成用·寰宇支配能量立方",
+  "block.craftitem.craft_infinite_energy_cube": "合成用·悖论无限能量立方",
+
+  "description.craftitem.craft_energy_cube": "某种方块的仿制品，与原物品相比它的优点只是可以堆叠"
+}

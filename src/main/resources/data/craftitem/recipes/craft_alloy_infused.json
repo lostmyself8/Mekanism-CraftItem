@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "tag": "mekanism:alloys/infused"
+    }
+  ],
+  "result": {
+    "item": "craftitem:craft_alloy_infused"
+  }
+}

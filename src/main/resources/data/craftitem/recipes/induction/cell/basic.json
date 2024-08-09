@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "craftitem:craft_basic_energy_cube"
+    },
+    "E": {
+      "item": "craftitem:craft_energy_tablet"
+    },
+    "L": {
+      "tag": "forge:dusts/lithium"
+    }
+  },
+  "pattern": [
+    "LEL",
+    "E#E",
+    "LEL"
+  ],
+  "result": {
+    "item": "mekanism:basic_induction_cell"
+  }
+}

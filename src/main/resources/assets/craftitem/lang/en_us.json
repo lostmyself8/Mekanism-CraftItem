@@ -1,0 +1,17 @@
+{
+  "constants.craftitem.mod_name": "Mekanism:CraftItem",
+
+  "item.craftitem.craft_alloy_infused": "Craft Alloy Infused",
+  "item.craftitem.craft_energy_tablet": "Craft Energy Tablet",
+
+  "block.craftitem.craft_basic_energy_cube": "Craft Basic Energy Cube",
+  "block.craftitem.craft_advanced_energy_cube": "Craft Advances Energy Cube",
+  "block.craftitem.craft_elite_energy_cube": "Craft Elite Energy Cube",
+  "block.craftitem.craft_ultimate_energy_cube": "Craft Ultimate Energy Cube",
+  "block.craftitem.craft_absolute_energy_cube": "Craft Absolute Energy Cube",
+  "block.craftitem.craft_supreme_energy_cube": "Craft Supreme Energy Cube",
+  "block.craftitem.craft_cosmic_energy_cube": "Craft Cosmic Energy Cube",
+  "block.craftitem.craft_infinite_energy_cube": "Craft Infinite Energy Cube",
+
+  "description.craftitem.craft_energy_cube": "A replica of a certain block, which has the advantage of being stackable compared to the original item"
+}

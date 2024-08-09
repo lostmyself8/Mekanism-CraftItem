@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "craftitem:craft_alloy_infused"
+    },
+    "I": {
+      "tag": "forge:ingots/gold"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "AIA",
+    "RIR"
+  ],
+  "result": {
+    "item": "craftitem:craft_energy_tablet"
+  }
+}

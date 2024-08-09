@@ -1,0 +1,12 @@
+{
+  "values": [
+    "craftitem:craft_basic_energy_cube",
+    "craftitem:craft_advanced_energy_cube",
+    "craftitem:craft_elite_energy_cube",
+    "craftitem:craft_ultimate_energy_cube",
+    "craftitem:craft_absolute_energy_cube",
+    "craftitem:craft_supreme_energy_cube",
+    "craftitem:craft_cosmic_energy_cube",
+    "craftitem:craft_infinite_energy_cube"
+  ]
+}
