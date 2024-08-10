@@ -27,19 +27,9 @@ public class CraftBlocks {
     public static final BlockRegistryObject<CraftBlockEnergyCube, CraftItemBlockEnergyCube> CRAFT_ELITE_ENERGY_CUBE = registerEnergyCube(CraftBlockTypes.CRAFT_ELITE_ENERGY_CUBE);
     public static final BlockRegistryObject<CraftBlockEnergyCube, CraftItemBlockEnergyCube> CRAFT_ULTIMATE_ENERGY_CUBE = registerEnergyCube(CraftBlockTypes.CRAFT_ULTIMATE_ENERGY_CUBE);
 
-    public static final BlockRegistryObject<CraftExtraBlockEnergyCube, CraftExtraItemBlockEnergyCube> CRAFT_ABSOLUTE_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? registerExtraEnergyCube(CraftBlockTypes.CRAFT_ABSOLUTE_ENERGY_CUBE) : null;
-    public static final BlockRegistryObject<CraftExtraBlockEnergyCube, CraftExtraItemBlockEnergyCube> CRAFT_SUPREME_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? registerExtraEnergyCube(CraftBlockTypes.CRAFT_SUPREME_ENERGY_CUBE) : null;
-    public static final BlockRegistryObject<CraftExtraBlockEnergyCube, CraftExtraItemBlockEnergyCube> CRAFT_COSMIC_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? registerExtraEnergyCube(CraftBlockTypes.CRAFT_COSMIC_ENERGY_CUBE) : null;
-    public static final BlockRegistryObject<CraftExtraBlockEnergyCube, CraftExtraItemBlockEnergyCube> CRAFT_INFINITE_ENERGY_CUBE = Addons.MEKANISM_EXTRAS.isLoaded() ? registerExtraEnergyCube(CraftBlockTypes.CRAFT_INFINITE_ENERGY_CUBE) : null;
-
     private static BlockRegistryObject<CraftBlockEnergyCube, CraftItemBlockEnergyCube> registerEnergyCube(CraftMachine<TileEntityEnergyCube> type) {
         ITier tier = Objects.requireNonNull(type.get(AttributeTier.class)).tier();
         return CRAFT_BLOCK.register("craft_" + tier.getBaseTier().getLowerName() + "_energy_cube", () -> new CraftBlockEnergyCube(type), CraftItemBlockEnergyCube::new);
-    }
-
-    private static BlockRegistryObject<CraftExtraBlockEnergyCube, CraftExtraItemBlockEnergyCube> registerExtraEnergyCube(CraftMachine<ExtraTileEntityEnergyCube> type) {
-        IAdvanceTier tier = Objects.requireNonNull(type.get(ExtraAttributeTier.class)).tier();
-        return CRAFT_BLOCK.register("craft_" + tier.getAdvanceTier().getLowerName() + "_energy_cube", () -> new CraftExtraBlockEnergyCube(type), CraftExtraItemBlockEnergyCube::new);
     }
 
     public static void register(IEventBus eventBus) {
