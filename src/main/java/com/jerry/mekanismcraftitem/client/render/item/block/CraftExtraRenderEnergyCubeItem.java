@@ -1,9 +1,7 @@
 package com.jerry.mekanismcraftitem.client.render.item.block;
 
-import com.jerry.mekanism_extras.client.model.ExtraModelEnergyCore;
 import com.jerry.mekanism_extras.client.render.tileentity.ExtraRenderEnergyCube;
 import com.jerry.mekanism_extras.common.block.storage.energycube.ECTier;
-import com.jerry.mekanism_extras.common.block.storage.energycube.EnergyCubeColor;
 import com.jerry.mekanism_extras.common.block.storage.energycube.ExtraTileEntityEnergyCube;
 import com.jerry.mekanismcraftitem.common.item.block.CraftExtraItemBlockEnergyCube;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -27,13 +25,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class CraftExtraRenderEnergyCubeItem extends MekanismISTER {
     public static final CraftExtraRenderEnergyCubeItem CRAFT_EXTRA_RENDERER = new CraftExtraRenderEnergyCubeItem();
-    private ExtraModelEnergyCore core;
+//    private ExtraModelEnergyCore core;
 
     public CraftExtraRenderEnergyCubeItem() {
     }
 
     public void onResourceManagerReload(@NotNull ResourceManager resourceManager) {
-        this.core = new ExtraModelEnergyCore(this.getEntityModels());
+//        core = new ExtraModelEnergyCore(this.getEntityModels());
     }
 
     public void renderByItem(@NotNull ItemStack stack, @NotNull ItemDisplayContext displayContext, @NotNull PoseStack matrix, @NotNull MultiBufferSource renderer, int light, int overlayLight) {
@@ -78,7 +76,8 @@ public class CraftExtraRenderEnergyCubeItem extends MekanismISTER {
             matrix.translate(0.0, Math.sin(Math.toRadians(3.0F * ticks)) / 7.0, 0.0);
             matrix.mulPose(Axis.YP.rotationDegrees(scaledTicks));
             matrix.mulPose(ExtraRenderEnergyCube.coreVec.rotationDegrees(36.0F + scaledTicks));
-            this.core.render(matrix, renderer, 15728880, overlayLight, EnergyCubeColor.getColor(tier), (float)energyPercentage);
+            //用扳手将带有电的能量立方敲下会导致core为null
+//            core.render(matrix, renderer, 15728880, overlayLight, EnergyCubeColor.getColor(tier), (float)energyPercentage);
             matrix.popPose();
         }
 

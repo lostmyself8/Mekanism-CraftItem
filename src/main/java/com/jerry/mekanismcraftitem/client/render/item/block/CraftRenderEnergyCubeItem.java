@@ -5,7 +5,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import mekanism.api.NBTConstants;
 import mekanism.api.RelativeSide;
-import mekanism.client.model.ModelEnergyCore;
 import mekanism.client.render.MekanismRenderer;
 import mekanism.client.render.item.MekanismISTER;
 import mekanism.client.render.tileentity.RenderEnergyCube;
@@ -17,7 +16,6 @@ import mekanism.common.util.EnumUtils;
 import mekanism.common.util.ItemDataUtils;
 import mekanism.common.util.StorageUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -30,11 +28,11 @@ import org.jetbrains.annotations.NotNull;
 public class CraftRenderEnergyCubeItem extends MekanismISTER {
 
     public static final CraftRenderEnergyCubeItem CRAFT_RENDERER = new CraftRenderEnergyCubeItem();
-    private ModelEnergyCore core;
+//    private ModelEnergyCore core;
 
     @Override
     public void onResourceManagerReload(@NotNull ResourceManager resourceManager) {
-        core = new ModelEnergyCore(getEntityModels());
+//        core = new ModelEnergyCore(getEntityModels());
     }
 
     @Override
@@ -71,7 +69,8 @@ public class CraftRenderEnergyCubeItem extends MekanismISTER {
             matrix.translate(0, Math.sin(Math.toRadians(3 * ticks)) / 7, 0);
             matrix.mulPose(Axis.YP.rotationDegrees(scaledTicks));
             matrix.mulPose(RenderEnergyCube.coreVec.rotationDegrees(36F + scaledTicks));
-            core.render(matrix, renderer, LightTexture.FULL_BRIGHT, overlayLight, tier.getBaseTier(), (float) energyPercentage);
+            //用扳手将带有电的能量立方敲下会导致core为null
+//            core.render(matrix, renderer, LightTexture.FULL_BRIGHT, overlayLight, tier.getBaseTier(), (float) energyPercentage);
             matrix.popPose();
         }
     }

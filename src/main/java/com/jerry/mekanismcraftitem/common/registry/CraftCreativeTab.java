@@ -2,6 +2,8 @@ package com.jerry.mekanismcraftitem.common.registry;
 
 import com.jerry.mekanismcraftitem.MekanismCraftItem;
 import com.jerry.mekanismcraftitem.common.CraftLang;
+import com.jerry.mekanismcraftitem.integration.Addons;
+import com.jerry.mekanismcraftitem.integration.registry.CraftExtraBlocks;
 import mekanism.common.registration.impl.CreativeTabDeferredRegister;
 import mekanism.common.registration.impl.CreativeTabRegistryObject;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,6 +16,7 @@ public class CraftCreativeTab {
         builder.displayItems((displayParameters, output) -> {
             CreativeTabDeferredRegister.addToDisplay(CraftItems.CRAFT_ITEMS, output);
             CreativeTabDeferredRegister.addToDisplay(CraftBlocks.CRAFT_BLOCK, output);
+            if (Addons.MEKANISM_EXTRAS.isLoaded()) CreativeTabDeferredRegister.addToDisplay(CraftExtraBlocks.CRAFT_EXTRA_BLOCK, output);
         })
     );
 

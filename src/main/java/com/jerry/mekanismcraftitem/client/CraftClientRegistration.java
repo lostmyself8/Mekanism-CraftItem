@@ -5,8 +5,8 @@ import com.jerry.mekanism_extras.common.block.storage.energycube.ECTier;
 import com.jerry.mekanism_extras.common.block.storage.energycube.EnergyCubeColor;
 import com.jerry.mekanismcraftitem.MekanismCraftItem;
 import com.jerry.mekanismcraftitem.common.item.block.CraftExtraItemBlockEnergyCube;
-import com.jerry.mekanismcraftitem.common.registry.CraftBlocks;
 import com.jerry.mekanismcraftitem.integration.Addons;
+import com.jerry.mekanismcraftitem.integration.registry.CraftExtraBlocks;
 import mekanism.client.ClientRegistrationUtil;
 import mekanism.client.render.MekanismRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,8 +28,8 @@ public class CraftClientRegistration {
                             }
                         }
                         return -1;
-                    }, CraftBlocks.CRAFT_ABSOLUTE_ENERGY_CUBE, CraftBlocks.CRAFT_SUPREME_ENERGY_CUBE, CraftBlocks.CRAFT_COSMIC_ENERGY_CUBE,
-                    CraftBlocks.CRAFT_INFINITE_ENERGY_CUBE);
+                    }, CraftExtraBlocks.CRAFT_ABSOLUTE_ENERGY_CUBE, CraftExtraBlocks.CRAFT_SUPREME_ENERGY_CUBE, CraftExtraBlocks.CRAFT_COSMIC_ENERGY_CUBE,
+                    CraftExtraBlocks.CRAFT_INFINITE_ENERGY_CUBE);
         }
     }
 
@@ -42,8 +42,8 @@ public class CraftClientRegistration {
                             return MekanismRenderer.getColorARGB(color[0], color[1], color[2], 1);
                         }
                         return -1;
-                    }, CraftBlocks.CRAFT_ABSOLUTE_ENERGY_CUBE, CraftBlocks.CRAFT_SUPREME_ENERGY_CUBE, CraftBlocks.CRAFT_COSMIC_ENERGY_CUBE,
-                    CraftBlocks.CRAFT_INFINITE_ENERGY_CUBE);
+                    }, CraftExtraBlocks.CRAFT_ABSOLUTE_ENERGY_CUBE, CraftExtraBlocks.CRAFT_SUPREME_ENERGY_CUBE, CraftExtraBlocks.CRAFT_COSMIC_ENERGY_CUBE,
+                    CraftExtraBlocks.CRAFT_INFINITE_ENERGY_CUBE);
         }
     }
 }
